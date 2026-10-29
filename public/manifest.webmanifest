@@ -1,0 +1,23 @@
+{
+  "name": "AgroSensor Tech",
+  "short_name": "AgroSensor",
+  "description": "Controle inteligente, colheita eficiente.",
+  "id": "/",
+  "start_url": "/#/inicio",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "any",
+  "lang": "pt-BR",
+  "background_color": "#fffdfb",
+  "theme_color": "#0b1f14",
+  "categories": ["productivity", "business"],
+  "icons": [
+    { "src": "/img/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "/img/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "/img/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ],
+  "shortcuts": [
+    { "name": "Mapa", "url": "/#/mapa", "icons": [{ "src": "/img/icon-192.png", "sizes": "192x192" }] },
+    { "name": "Registrar foco", "url": "/#/pragas", "icons": [{ "src": "/img/icon-192.png", "sizes": "192x192" }] }
+  ]
+}
