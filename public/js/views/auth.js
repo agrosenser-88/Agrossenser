@@ -29,7 +29,7 @@ export function renderLogin(root, onLogin) {
     { name: 'password', label: 'Senha', type: 'password', required: true, autocomplete: 'current-password', full: true },
   ], { submitLabel: 'Entrar', onSubmit: async (v) => { const r = await api.post('/api/auth/login', v); await onLogin(r.user); } });
   frame(root, 'Acesse sua conta', h('p', { class: 'muted small' }, 'Controle inteligente, colheita eficiente.'), el,
-    h('div', { class: 'auth-links' }, h('a', { href: '#/esqueci' }, 'Esqueci minha senha'), h('span', { class: 'muted tiny' }, 'AgroSensor Tech')));
+    h('div', { class: 'auth-links' }, h('a', { href: '#/esqueci' }, 'Esqueci minha senha')));
   form.inputs.username.focus();
 }
 

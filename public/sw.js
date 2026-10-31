@@ -1,5 +1,5 @@
 // Service worker: guarda apenas arquivos estáticos públicos (casca do app). Nunca armazena respostas da API (dados sensíveis).
-const VERSION = 'agrosensor-v3';
+const VERSION = 'agrosensor-v4';
 const SHELL = ['/', '/index.html', '/offline.html', '/css/app.css', '/js/app.js', '/js/api.js', '/js/ui.js', '/js/icons.js', '/js/charts.js', '/js/map.js', '/js/theme-init.js', '/js/views/auth.js', '/js/views/shared.js', '/manifest.webmanifest', '/img/logo.png', '/img/logo-mark.png', '/img/icon-192.png'];
 
 self.addEventListener('install', (e) => {
