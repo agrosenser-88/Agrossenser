@@ -1,7 +1,7 @@
 {
   "name": "agrosensor-tech",
   "version": "1.0.0",
-  "description": "AgroSensor Tech - Controle inteligente, colheita eficiente.",
+  "description": "AgroSenser Tech - Controle inteligente, colheita eficiente.",
   "main": "server/index.js",
   "license": "UNLICENSED",
   "private": true,

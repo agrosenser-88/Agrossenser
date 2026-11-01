@@ -11,7 +11,7 @@ const NAV = [
   { key: 'inicio', label: 'Início', icon: 'home', mod: null },
   { key: 'fazendas', label: 'Fazendas', icon: 'farm', mod: 'farms' },
   { key: 'mapa', label: 'Mapa', icon: 'map', mod: 'map' },
-  { key: 'ia', label: 'AgroSensor IA', icon: 'ia', mod: 'ia' },
+  { key: 'ia', label: 'AgroSenser IA', icon: 'ia', mod: 'ia' },
   { key: 'pragas', label: 'Pragas e doenças', icon: 'bug', mod: 'occurrences' },
   { key: 'maquinas', label: 'Máquinas', icon: 'tractor', mod: 'machines' },
   { key: 'drones', label: 'Drones', icon: 'drone', mod: 'drones' },
@@ -66,14 +66,14 @@ function buildShell() {
     links.set(n.key + cls, a); return a;
   };
   const sidebar = h('aside', { class: 'sidebar' },
-    h('a', { href: '#/inicio', class: 'brand-plate', 'aria-label': 'AgroSensor - início' }, h('img', { src: '/img/logo.png', alt: 'AgroSensor - Controle inteligente, colheita eficiente' })),
+    h('a', { href: '#/inicio', class: 'brand-plate', 'aria-label': 'AgroSenser - início' }, h('img', { src: '/img/logo.png', alt: 'AgroSenser - Controle inteligente, colheita eficiente' })),
     h('nav', { class: 'nav', 'aria-label': 'Menu principal' }, items.map((n) => mkLink(n))),
     h('div', { class: 'sidebar-foot' },
       h('div', { class: 'user-chip' }, h('div', { class: 'avatar' }, (u.name || '?').trim().slice(0, 1).toUpperCase()), h('div', { style: { minWidth: 0 } }, h('div', { style: { fontWeight: 600, overflow: 'hidden', textOverflow: 'ellipsis' } }, u.name), h('div', { class: 'tiny muted' }, u.role_label))),
       h('div', { class: 'row' }, themeBtn('btn icon'), h('button', { class: 'btn grow', style: { flex: 1 }, onclick: logout }, icon('logout', 17), 'Sair'))));
   const titleEl = h('div', { class: 'title' });
   const topbar = h('header', { class: 'topbar' },
-    h('a', { href: '#/inicio', class: 'top-logo', 'aria-label': 'Início' }, h('img', { src: '/img/logo-mark.png', alt: 'AgroSensor' })),
+    h('a', { href: '#/inicio', class: 'top-logo', 'aria-label': 'Início' }, h('img', { src: '/img/logo-mark.png', alt: 'AgroSenser' })),
     titleEl, h('div', { class: 'spacer' }),
     h('a', { href: '#/alertas', class: 'btn ghost icon', 'aria-label': 'Alertas', style: { position: 'relative' } }, icon('bell', 20), (() => { const p = h('span', { class: 'pill hidden', style: { position: 'absolute', top: '2px', right: '0' } }); pillEls.add(p); return p; })()),
     themeBtn());
@@ -129,7 +129,7 @@ async function route() {
   if (!VIEWS[first]) { history.replaceState(null, '', '#/inicio'); }
   const nav = NAV.find((n) => n.key === key);
   if (nav.mod && !can(nav.mod)) { clear(shell.content); shell.content.appendChild(emptyState({ iconName: 'shield', title: 'Acesso restrito', text: 'Seu perfil não tem permissão para acessar esta área. Fale com o administrador.' })); return; }
-  shell.titleEl.textContent = nav.label; document.title = `${nav.label} · AgroSensor Tech`;
+  shell.titleEl.textContent = nav.label; document.title = `${nav.label} · AgroSenser Tech`;
   shell.wrap.parentNode.querySelectorAll('[data-key]').forEach((a) => a.classList.toggle('active', a.dataset.key === key));
   const token = Symbol('view'); current = token;
   clear(shell.content); shell.content.appendChild(loading());

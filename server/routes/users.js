@@ -113,7 +113,7 @@ module.exports = function register(app) {
     let emailed = false;
     if (req.body.send_email && mailer.enabled() && u.email) {
       try {
-        await mailer.send({ to: u.email, subject: 'AgroSensor Tech - redefinição de senha', text: `Olá, ${u.name}.\n\nUse o link abaixo para definir uma nova senha (válido por 24 horas):\n\n${url}\n` });
+        await mailer.send({ to: u.email, subject: 'AgroSenser Tech - redefinição de senha', text: `Olá, ${u.name}.\n\nUse o link abaixo para definir uma nova senha (válido por 24 horas):\n\n${url}\n` });
         emailed = true;
       } catch (e) { console.error('[e-mail] falha:', e.message); }
     }

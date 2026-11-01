@@ -36,7 +36,7 @@ function buildPdf({ title, subtitle, columns, rows, summary = [] }) {
   let y = newPage();
   rect(PAGE.m, y - 4, PAGE.w - 2 * PAGE.m, 3, [0.18, 0.55, 0.25]);
   y -= 22;
-  text(PAGE.m, y, 'AgroSensor Tech', 16, true);
+  text(PAGE.m, y, 'AgroSenser Tech', 16, true);
   text(PAGE.w - PAGE.m - 190, y, 'Controle inteligente, colheita eficiente', 8);
   y -= 22;
   text(PAGE.m, y, title, 13, true);

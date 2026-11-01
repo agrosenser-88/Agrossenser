@@ -198,7 +198,7 @@ const REPORTS = {
       const rows = db.all(`SELECT x.observed_at, fm.name AS farm, p.name AS plot, p.crop, x.category, x.name, x.severity, x.status, x.area_affected_ha, x.source FROM occurrences x JOIN farms fm ON fm.id = x.farm_id LEFT JOIN plots p ON p.id = x.plot_id${f.where} ORDER BY x.observed_at DESC LIMIT 5000`, ...f.params);
       return {
         columns: ['Data', 'Fazenda', 'Talhão', 'Cultura', 'Tipo', 'Ocorrência', 'Gravidade', 'Situação', 'Área afetada (ha)', 'Origem'],
-        rows: rows.map((r) => [fmtDate(r.observed_at), r.farm, r.plot || '', r.crop || '', CAT_LABEL[r.category], r.name, SEV_LABEL[r.severity], STATUS_LABEL[r.status], fmtNum(r.area_affected_ha), r.source === 'ia' ? 'AgroSensor IA' : 'Manual']),
+        rows: rows.map((r) => [fmtDate(r.observed_at), r.farm, r.plot || '', r.crop || '', CAT_LABEL[r.category], r.name, SEV_LABEL[r.severity], STATUS_LABEL[r.status], fmtNum(r.area_affected_ha), r.source === 'ia' ? 'AgroSenser IA' : 'Manual']),
         summary: [{ label: 'Total de ocorrências', value: rows.length }, { label: 'Em aberto', value: rows.filter((r) => r.status !== 'resolvida').length }, { label: 'Graves/críticas', value: rows.filter((r) => ['alta', 'critica'].includes(r.severity)).length }],
         chart: { type: 'bar', title: 'Ocorrências por gravidade', labels: ['Baixa', 'Média', 'Alta', 'Crítica'], values: ['baixa', 'media', 'alta', 'critica'].map((s) => rows.filter((r) => r.severity === s).length) },
       };

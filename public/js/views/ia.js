@@ -15,7 +15,7 @@ export async function render(host) {
   const banner = status.configured
     ? h('div', { class: 'notice ok' }, icon('check', 18), h('div', null, h('b', null, 'Serviço de visão computacional conectado.'), ' Os resultados são indicativos e não substituem a avaliação de um engenheiro agrônomo.'))
     : h('div', { class: 'notice warn' }, icon('alert', 18), h('div', null, h('b', null, 'Análise automática ainda não configurada.'), ' Você já pode enviar fotos: elas ficam salvas com fazenda, talhão e sintomas. Para ativar a análise, o administrador deve definir a chave do serviço de IA no servidor (veja Configurações > Integrações).'));
-  host.append(pageHead('AgroSensor IA', 'Fotografe a planta, informe os sintomas e receba possibilidades para investigar.', can('ia', 'w') ? h('button', { class: 'btn primary', onclick: () => newAnalysis() }, icon('camera', 17), 'Nova análise') : null), banner, body);
+  host.append(pageHead('AgroSenser IA', 'Fotografe a planta, informe os sintomas e receba possibilidades para investigar.', can('ia', 'w') ? h('button', { class: 'btn primary', onclick: () => newAnalysis() }, icon('camera', 17), 'Nova análise') : null), banner, body);
   await load();
 
   async function load() {

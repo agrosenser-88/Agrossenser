@@ -4,7 +4,7 @@ import { h, clear, buildForm, errMsg, toast } from '../ui.js';
 function frame(root, title, ...kids) {
   clear(root);
   root.appendChild(h('div', { class: 'auth-page' }, h('div', { class: 'auth-card' },
-    h('div', { class: 'logo-plate' }, h('img', { src: '/img/logo.png', alt: 'AgroSensor - Controle inteligente, colheita eficiente' })),
+    h('div', { class: 'logo-plate' }, h('img', { src: '/img/logo.png', alt: 'AgroSenser - Controle inteligente, colheita eficiente' })),
     h('h1', null, title), kids)));
 }
 

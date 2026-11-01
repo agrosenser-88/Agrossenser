@@ -1,4 +1,4 @@
--- AgroSensor Tech - esquema inicial
+-- AgroSenser Tech - esquema inicial
 -- Todas as tabelas de dados possuem org_id (isolamento entre organizações).
 
 CREATE TABLE organizations (
@@ -151,7 +151,7 @@ CREATE TABLE occurrences (
 CREATE INDEX occurrences_org_idx ON occurrences(org_id, farm_id, observed_at);
 CREATE INDEX occurrences_status_idx ON occurrences(org_id, status, severity);
 
--- Análises do AgroSensor IA
+-- Análises do AgroSenser IA
 CREATE TABLE ai_analyses (
   id          INTEGER PRIMARY KEY AUTOINCREMENT,
   org_id      INTEGER NOT NULL REFERENCES organizations(id) ON DELETE CASCADE,

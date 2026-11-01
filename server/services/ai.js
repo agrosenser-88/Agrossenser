@@ -1,10 +1,10 @@
 'use strict';
-// AgroSensor IA: análise de imagem por modelo de visão REAL (API Anthropic). Sem chave configurada, a análise fica indisponível;
+// AgroSenser IA: análise de imagem por modelo de visão REAL (API Anthropic). Sem chave configurada, a análise fica indisponível;
 // nenhum resultado é inventado.
 const fs = require('fs');
 const config = require('../config');
 
-const SYSTEM = `Você é um assistente de apoio à identificação de problemas fitossanitários em lavouras, dentro do aplicativo AgroSensor Tech.
+const SYSTEM = `Você é um assistente de apoio à identificação de problemas fitossanitários em lavouras, dentro do aplicativo AgroSenser Tech.
 Analise a foto e as informações fornecidas e responda SOMENTE com um objeto JSON válido (sem texto fora do JSON), em português do Brasil, com este formato:
 {
  "image_usable": true|false,

@@ -113,8 +113,8 @@ module.exports = function register(app) {
         const base = config.publicUrl || `${req.headers['x-forwarded-proto'] || 'http'}://${req.headers.host}`;
         await mailer.send({
           to: user.email,
-          subject: 'AgroSensor Tech - redefinição de senha',
-          text: `Olá, ${user.name}.\n\nRecebemos um pedido para redefinir a sua senha no AgroSensor Tech.\nUse o link abaixo (válido por 1 hora):\n\n${base}/#/redefinir/${token}\n\nSe você não fez essa solicitação, ignore esta mensagem.`,
+          subject: 'AgroSenser Tech - redefinição de senha',
+          text: `Olá, ${user.name}.\n\nRecebemos um pedido para redefinir a sua senha no AgroSenser Tech.\nUse o link abaixo (válido por 1 hora):\n\n${base}/#/redefinir/${token}\n\nSe você não fez essa solicitação, ignore esta mensagem.`,
         });
       } catch (e) {
         console.error('[e-mail] falha ao enviar redefinição:', e.message);

@@ -86,7 +86,7 @@ module.exports = function register(app) {
       organization: org,
       integrations: [
         { key: 'database', name: 'Banco de dados (SQLite local)', status: 'configurada', detail: 'Dados persistidos em arquivo. Veja o procedimento de backup na documentação.' },
-        { key: 'ia', name: 'AgroSensor IA (visão computacional)', status: config.ai.enabled ? 'configurada' : 'pendente', detail: config.ai.enabled ? `Modelo: ${config.ai.model}` : 'Defina ANTHROPIC_API_KEY no servidor para habilitar a análise automática de imagens.' },
+        { key: 'ia', name: 'AgroSenser IA (visão computacional)', status: config.ai.enabled ? 'configurada' : 'pendente', detail: config.ai.enabled ? `Modelo: ${config.ai.model}` : 'Defina ANTHROPIC_API_KEY no servidor para habilitar a análise automática de imagens.' },
         { key: 'weather', name: 'Clima (Open-Meteo)', status: config.weather.enabled ? 'configurada' : 'desativada', detail: config.weather.enabled ? 'Previsão e histórico reais por coordenadas da fazenda. Não exige chave de API.' : 'Ative com WEATHER_ENABLED=true.' },
         { key: 'sensors', name: 'Sensores IoT via HTTP', status: 'configurada', detail: 'Endpoint POST /api/ingest/{ID do sensor} com chave do dispositivo. MQTT: integração futura (ponte para HTTP).' },
         { key: 'email', name: 'E-mail (SMTP)', status: mailer.enabled() ? 'configurada' : 'pendente', detail: mailer.enabled() ? 'Recuperação de senha por e-mail ativa.' : 'Defina SMTP_HOST, SMTP_USER, SMTP_PASS e SMTP_FROM. Sem isso, o administrador gera links de redefinição.' },

@@ -42,7 +42,7 @@ const config = {
   sessionIdleHours: num(env.SESSION_IDLE_HOURS, 12),
   sessionMaxDays: num(env.SESSION_MAX_DAYS, 7),
   seed: {
-    orgName: env.ORG_NAME || 'AgroSensor Tech',
+    orgName: env.ORG_NAME || 'AgroSenser Tech',
     username: env.ADMIN_USERNAME || 'admin',
     password: env.ADMIN_PASSWORD || '',
     name: env.ADMIN_NAME || 'Administrador',

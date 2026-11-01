@@ -1,4 +1,4 @@
-/* AgroSensor Tech - estilos. Verde-escuro (principal), verde-limão (destaque), azul (conectividade). */
+/* AgroSenser Tech - estilos. Verde-escuro (principal), verde-limão (destaque), azul (conectividade). */
 :root, [data-theme="dark"] {
   --bg: #06130e; --bg-2: #071e15; --card: #0b2a1e; --card-2: #103323; --line: #204c32; --line-2: #2e6342;
   --text: #f6fff8; --text-2: #b6cdbd; --text-3: #87a894;

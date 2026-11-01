@@ -10,7 +10,7 @@ export async function render(host) {
     endpoint: '/api/occurrences', module: 'occurrences', entity: 'ocorrência', title: 'Pragas e doenças', subtitle: 'Registro de focos, gravidade e acompanhamento do tratamento.', iconName: 'bug', newLabel: 'Registrar ocorrência',
     emptyTitle: 'Nenhuma ocorrência registrada', emptyText: 'Registre focos de pragas, doenças e plantas daninhas encontrados nas inspeções. Eles aparecem no mapa e geram alertas.',
     periodFilter: true, modalSize: 'wide',
-    filters: [{ key: 'severity', label: 'Gravidade', options: options(L.severity) }, { key: 'status', label: 'Situação', options: options(L.occStatus) }, { key: 'category', label: 'Tipo', options: options(L.occCategory) }, { key: 'source', label: 'Origem', options: [{ value: 'manual', label: 'Manual' }, { value: 'ia', label: 'AgroSensor IA' }] }],
+    filters: [{ key: 'severity', label: 'Gravidade', options: options(L.severity) }, { key: 'status', label: 'Situação', options: options(L.occStatus) }, { key: 'category', label: 'Tipo', options: options(L.occCategory) }, { key: 'source', label: 'Origem', options: [{ value: 'manual', label: 'Manual' }, { value: 'ia', label: 'AgroSenser IA' }] }],
     defaults: () => ({ category: 'praga', severity: 'media', status: 'aberta', observed_at: new Date().toISOString() }),
     columns: [
       { label: 'Data', render: (r) => fmt.date(r.observed_at) }, { label: 'Ocorrência', render: (r) => [h('b', null, r.name), h('div', { class: 'tiny muted' }, L.occCategory[r.category])] },

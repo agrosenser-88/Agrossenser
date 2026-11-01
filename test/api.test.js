@@ -227,7 +227,7 @@ test('sensores: aguardando conexão, ingestão real, demonstração separada e a
   assert.equal((await dev.post(`/api/ingest/${s.device_id}`, { value: 40 }, { headers: { 'x-device-key': rot.api_key } })).status, 201);
 });
 
-test('AgroSensor IA: sem serviço configurado, informa indisponibilidade e salva histórico (sem resposta inventada)', async () => {
+test('AgroSenser IA: sem serviço configurado, informa indisponibilidade e salva histórico (sem resposta inventada)', async () => {
   const st = (await admin.get('/api/ia/status')).data; assert.equal(st.configured, false);
   const r = await admin.req('POST', '/api/ia/analyses', { form: multipart({ farm_id: farmId, plot_id: plotId, symptoms: 'Manchas amarelas' }, { field: 'image', data: PNG, type: 'image/png', name: 'folha.png' }) });
   assert.equal(r.status, 201); assert.equal(r.data.status, 'indisponivel'); assert.equal(r.data.result, null);

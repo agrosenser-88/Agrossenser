@@ -22,7 +22,7 @@ async function main() {
   server.requestTimeout = 120000;
   server.keepAliveTimeout = 65000;
   server.listen(config.port, config.host, () => {
-    console.log(`AgroSensor Tech em http://localhost:${config.port}  (${config.isProd ? 'produção' : 'desenvolvimento'})`);
+    console.log(`AgroSenser Tech em http://localhost:${config.port}  (${config.isProd ? 'produção' : 'desenvolvimento'})`);
     console.log(`[integrações] IA: ${config.ai.enabled ? 'ativa' : 'pendente (sem ANTHROPIC_API_KEY)'} | Clima: ${config.weather.enabled ? 'ativo' : 'desativado'} | SMTP: ${config.smtp.enabled ? 'ativo' : 'pendente'}`);
   });
   alerts.startScheduler();

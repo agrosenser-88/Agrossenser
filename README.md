@@ -1,6 +1,6 @@
-# AgroSensor Tech
+# AgroSenser Tech
 
-Sistema web (PWA) em português do Brasil para gestão agrícola: fazendas e talhões, mapa, AgroSensor IA, pragas e doenças, máquinas, drones, pulverização, clima, sensores/IoT, relatórios (PDF/CSV), custos e economia, alertas, usuários e configurações.
+Sistema web (PWA) em português do Brasil para gestão agrícola: fazendas e talhões, mapa, AgroSenser IA, pragas e doenças, máquinas, drones, pulverização, clima, sensores/IoT, relatórios (PDF/CSV), custos e economia, alertas, usuários e configurações.
 
 ## Requisitos
 - Node.js **22.13 ou superior** (usa o SQLite embutido do Node). Não há dependências npm para instalar.
@@ -29,7 +29,7 @@ npm run backup                             # banco + fotos em backups/AAAAMMDD-H
 | Integração | Estado | Como ativar |
 |---|---|---|
 | Clima (Open-Meteo) | ativa, sem chave | Fazenda precisa de latitude/longitude. Se a fonte falhar, a tela diz "indisponível" |
-| AgroSensor IA | pendente | `ANTHROPIC_API_KEY` no `.env` (fica só no servidor). Sem chave, a foto é salva e o status é "indisponível". A IA apenas sugere; nada é registrado sem confirmação |
+| AgroSenser IA | pendente | `ANTHROPIC_API_KEY` no `.env` (fica só no servidor). Sem chave, a foto é salva e o status é "indisponível". A IA apenas sugere; nada é registrado sem confirmação |
 | E-mail (redefinir senha) | pendente | `SMTP_*` no `.env`. Sem SMTP, o administrador gera um link de redefinição |
 | Sensores | pronto para receber | `POST /api/ingest/<device_id>` com cabeçalho `X-Device-Key` (chave mostrada uma única vez ao cadastrar). Sem leitura real: "Aguardando conexão" |
 | Push, rastreio GPS de máquinas, SDK de drones, MQTT, taxa variável, Play Store | **não implementados** | Fora do escopo desta versão |
